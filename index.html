@@ -27,6 +27,62 @@ body {
   position: relative;
 }
 
+h1 { font-size: 28px; }
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.heart {
+  font-size: 40px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.love-text {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  animation-delay: 2s;
+}
+
+.question {
+  margin-top: 15px;
+  font-size: 20px;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  animation-delay: 5s;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
+
+.emoji-couple {
+  font-size: 50px;
+  margin-top: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.buttons {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 7s;
+}
+
 button {
   padding: 10px 20px;
   margin: 5px;
@@ -44,6 +100,18 @@ button {
   font-size: 20px;
   display: none;
 }
+
+.floating-hearts span {
+  position: absolute;
+  color: #fff;
+  animation: rise 5s linear infinite;
+  font-size: 20px;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-600px); opacity: 0; }
+}
 </style>
 </head>
 
@@ -54,35 +122,70 @@ button {
 
   <p>
     I just wanted to remind you how much you mean to me.<br><br>
-    You are my peace, my happiness, and my favorite person 💖
+    You are my peace, my happiness, and my favorite person.<br>
+    No matter what happens, I’m always here for you.<br>
+    I’m not going anywhere 💖
   </p>
 
-  <button class="yes" onclick="sayYes()">Yes ❤️</button>
-  <button class="no" id="noBtn">No 😅</button>
+  <div class="love-text">I love you Maloka ❤️</div>
+  <div class="question">Do you love me? 🥺</div>
+
+  <div class="emoji-couple">💑</div>
+
+  <div class="buttons">
+    <button class="yes" onclick="sayYes()">Yes ❤️</button>
+    <button class="no" id="noBtn">No 😅</button>
+  </div>
 
   <div class="response" id="response">
-    I knew it 😏❤️
+    I knew it 😏❤️ You make me the happiest person alive 💖
   </div>
+
+  <div class="heart">❤️</div>
 </div>
 
-<!-- 🎵 YouTube autoplay (muted for mobile) -->
-<iframe id="ytplayer."
-  width="0" height="0"
-  src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=1&loop=1&playlist=2Vv-BfVoq4g"
-  frameborder="0"
-  allow="autoplay">
-</iframe>
+<div class="floating-hearts">
+  <span style="left:10%; animation-delay:0s;">❤️</span>
+  <span style="left:30%; animation-delay:1s;">❤️</span>
+  <span style="left:50%; animation-delay:2s;">❤️</span>
+  <span style="left:70%; animation-delay:3s;">❤️</span>
+  <span style="left:90%; animation-delay:4s;">❤️</span>
+</div>
+
+<!-- 🎵 YouTube Player -->
+<div id="player" style="display:none;"></div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
+let player;
+
+// create player (autoplay muted)
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '0',
+    width: '0',
+    videoId: '2Vv-BfVoq4g',
+    playerVars: {
+      autoplay: 1,
+      mute: 1,
+      loop: 1,
+      playlist: '2Vv-BfVoq4g'
+    }
+  });
+}
+
+// YES button → unmute
 function sayYes() {
   document.getElementById('response').style.display = 'block';
 
-  // 🔊 unmute after click (works on mobile)
-  const player = document.getElementById("ytplayer");
-  player.src = "https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=0&loop=1&playlist=2Vv-BfVoq4g";
+  if (player) {
+    player.unMute();
+    player.setVolume(100);
+  }
 }
 
-// moving button 😅
+// moving "No" button 😅
 const noBtn = document.getElementById('noBtn');
 noBtn.addEventListener('mouseover', () => {
   const x = Math.random() * window.innerWidth * 0.6;
