@@ -1,173 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Maloka ❤️</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ff758c, #ff7eb3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: white;
-      text-align: center;
-      overflow: hidden;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Maloka ❤️</title>
 
-    .container {
-      background: rgba(0,0,0,0.3);
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 500px;
-      position: relative;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
 
-    h1 { font-size: 28px; }
+.container {
+  background: rgba(0,0,0,0.3);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  position: relative;
+}
 
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+h1 { font-size: 28px; }
 
-    .heart {
-      font-size: 40px;
-      animation: pulse 1s infinite;
-    }
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
+.heart {
+  font-size: 40px;
+  animation: pulse 1s infinite;
+}
 
-    .love-text {
-      margin-top: 20px;
-      font-size: 22px;
-      font-weight: bold;
-      opacity: 0;
-      animation: fadeIn 3s forwards;
-      animation-delay: 2s;
-    }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
 
-    .question {
-      margin-top: 15px;
-      font-size: 20px;
-      opacity: 0;
-      animation: fadeIn 3s forwards;
-      animation-delay: 5s;
-    }
+.love-text {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  animation-delay: 2s;
+}
 
-    @keyframes fadeIn { to { opacity: 1; } }
+.question {
+  margin-top: 15px;
+  font-size: 20px;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  animation-delay: 5s;
+}
 
-    .emoji-couple {
-      font-size: 50px;
-      margin-top: 15px;
-      animation: float 3s ease-in-out infinite;
-    }
+@keyframes fadeIn { to { opacity: 1; } }
 
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
-    }
+.emoji-couple {
+  font-size: 50px;
+  margin-top: 15px;
+  animation: float 3s ease-in-out infinite;
+}
 
-    .buttons {
-      margin-top: 20px;
-      opacity: 0;
-      animation: fadeIn 2s forwards;
-      animation-delay: 7s;
-    }
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
 
-    button {
-      padding: 10px 20px;
-      margin: 5px;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.buttons {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 7s;
+}
 
-    .yes { background: #4CAF50; color: white; }
-    .no { background: #f44336; color: white; position: absolute; }
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    .response {
-      margin-top: 20px;
-      font-size: 20px;
-      display: none;
-    }
+.yes { background: #4CAF50; color: white; }
+.no { background: #f44336; color: white; position: absolute; }
 
-    .floating-hearts span {
-      position: absolute;
-      color: #fff;
-      animation: rise 5s linear infinite;
-      font-size: 20px;
-    }
+.response {
+  margin-top: 20px;
+  font-size: 20px;
+  display: none;
+}
 
-    @keyframes rise {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(-600px); opacity: 0; }
-    }
-  </style>
+.floating-hearts span {
+  position: absolute;
+  color: #fff;
+  animation: rise 5s linear infinite;
+  font-size: 20px;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-600px); opacity: 0; }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Hey Maloka ❤️</h1>
+<div class="container">
+  <h1>Hey Maloka ❤️</h1>
 
-    <p>
-      I just wanted to remind you how much you mean to me.<br><br>
-      You are my peace, my happiness, and my favorite person.<br>
-      No matter what happens, I’m always here for you.<br>
-      I’m not going anywhere 💖
-    </p>
+  <p>
+    I just wanted to remind you how much you mean to me.<br><br>
+    You are my peace, my happiness, and my favorite person.<br>
+    No matter what happens, I’m always here for you.<br>
+    I’m not going anywhere 💖
+  </p>
 
-    <div class="love-text">I love you Maloka ❤️</div>
-    <div class="question">Do you love me? 🥺</div>
+  <div class="love-text">I love you Maloka ❤️</div>
+  <div class="question">Do you love me? 🥺</div>
 
-    <div class="emoji-couple">👩‍❤️‍👨</div>
+  <div class="emoji-couple">👩‍❤️‍👨</div>
 
-    <div class="buttons">
-      <button class="yes" onclick="sayYes()">Yes ❤️</button>
-      <button class="no" id="noBtn">No 😅</button>
-    </div>
-
-    <div class="response" id="response">I knew it 😏❤️ You make me the happiest person alive 💖</div>
-
-    <div class="heart">❤️</div>
+  <div class="buttons">
+    <button class="yes" onclick="sayYes()">Yes ❤️</button>
+    <button class="no" id="noBtn">No 😅</button>
   </div>
 
-  <div class="floating-hearts">
-    <span style="left:10%; animation-delay:0s;">❤️</span>
-    <span style="left:30%; animation-delay:1s;">❤️</span>
-    <span style="left:50%; animation-delay:2s;">❤️</span>
-    <span style="left:70%; animation-delay:3s;">❤️</span>
-    <span style="left:90%; animation-delay:4s;">❤️</span>
+  <div class="response" id="response">
+    I knew it 😏❤️ You make me the happiest person alive 💖
   </div>
 
-  <iframe width="0" height="0"
-    src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&loop=1&playlist=2Vv-BfVoq4g"
-    frameborder="0"
-    allow="autoplay"
-    allowfullscreen>
-  </iframe>
+  <div class="heart">❤️</div>
+</div>
 
-  <script>
-    function sayYes() {
-      document.getElementById('response').style.display = 'block';
+<div class="floating-hearts">
+  <span style="left:10%; animation-delay:0s;">❤️</span>
+  <span style="left:30%; animation-delay:1s;">❤️</span>
+  <span style="left:50%; animation-delay:2s;">❤️</span>
+  <span style="left:70%; animation-delay:3s;">❤️</span>
+  <span style="left:90%; animation-delay:4s;">❤️</span>
+</div>
+
+<!-- 🎵 LOCAL MUSIC -->
+<audio id="music" loop>
+  <source src="perfect.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function sayYes() {
+  document.getElementById('response').style.display = 'block';
+
+  const music = document.getElementById('music');
+  music.volume = 0;
+  music.play();
+
+  // smooth fade-in 🔥
+  let vol = 0;
+  const fade = setInterval(() => {
+    if (vol < 1) {
+      vol += 0.05;
+      music.volume = vol;
+    } else {
+      clearInterval(fade);
     }
+  }, 200);
+}
 
-    const noBtn = document.getElementById('noBtn');
-    noBtn.addEventListener('mouseover', () => {
-      const x = Math.random() * window.innerWidth * 0.6;
-      const y = Math.random() * window.innerHeight * 0.6;
-      noBtn.style.left = x + 'px';
-      noBtn.style.top = y + 'px';
-    });
-  </script>
+// moving "No" button 😅
+const noBtn = document.getElementById('noBtn');
+noBtn.addEventListener('mouseover', () => {
+  const x = Math.random() * window.innerWidth * 0.6;
+  const y = Math.random() * window.innerHeight * 0.6;
+  noBtn.style.left = x + 'px';
+  noBtn.style.top = y + 'px';
+});
+</script>
 
 </body>
 </html>
